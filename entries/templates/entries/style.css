@@ -1,0 +1,198 @@
+.html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+  }
+  
+  .t {
+    background-color: red;
+    border: 2px solid black;
+  }
+  
+  .header {
+    padding: 3%;
+    text-align: center;
+    background: #4c4c4c url('images/concrete.jpg');
+  }
+  
+  .container {
+    padding-top: 2%;
+  }
+  
+  h1 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    line-height: 0.9;
+    font-size: 4rem;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  h1 b {
+    font-weight: bolder;
+  }
+  
+  h3 {
+    color: white;
+    margin-left: 0;
+    line-height: 80%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+  }
+  
+  #info {
+    text-align: right;
+  }
+  
+  .links img {
+  
+    max-width: 1.2rem;
+    min-width: 1rem;
+    width: auto;
+    display: block;
+  }
+  
+  .links p {
+    line-height: 1.2rem;
+    padding-right: 5%;
+  
+  }
+  
+  .links div {
+    padding: 0;
+  
+  }
+  .links {
+    justify-content: flex-end;
+    text-decoration: none;
+    margin-bottom: 2%
+  }
+  
+  a, p, h2, h4, h5, h6 {
+    color: #4d4d4d;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  h4 {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  h2 {
+    margin-left: 0;
+    font-weight: bold;
+  }
+  
+  .ph {
+    margin-bottom: 1em;
+  }
+  
+  p {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  .segment {
+    padding: 0;
+  }
+  
+  .place {
+    text-align: right;
+    font-size: 0.8rem;
+  }
+  
+  #profil {
+    border-radius: 50%;
+    width: 70%;
+    align: right;
+    display: inline-block;
+  }
+  
+  a {
+    color: #4d4d4d;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #4d4d4d;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px;
+  }
+  
+  
+  @media only screen and (max-width: 992px) {
+    #info p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .place {
+      text-align: left;
+    }
+  }
+  
+  @media only screen and (max-width: 575px) {
+    #info, #content {
+      text-align: left;
+      padding-left: 12%;
+    }
+  
+    #info p {
+      font-size: 1rem;
+    }
+  
+    .place {
+      text-align: left;
+    }
+  
+    .header {
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+  
+    #profil {
+      width: 50%;
+    }
+  
+    .pic {
+      text-align: center;
+    }
+  
+    h4 {
+      font-size: 2rem;
+    }
+  
+    .links {
+      justify-content: flex-start;
+    }
+  }
+  
+  @media only screen and (max-width: 362px) {
+    h1 {
+      font-size: 2rem
+    }
+  
+    h3 {
+      font-size: 1rem
+    }
+  }
+  
+  @media only screen and (max-width: 250px) {
+    html {
+      font-size: 0.6rem
+    }
+  }
+  
+  @media only screen and (max-width: 160px) {
+    html {
+      font-size: 0.4rem
+    }
+  }

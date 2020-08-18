@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="Curriculum vitae for Erik Turøy Midtun">
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.png">
+
+  <title>erikmidtun</title>
+</head>
+
+<body>
+  <div class="header col-12">
+    <h1>Erik<b>TMidtun</b></h1>
+    <h3>Curriculum Vitae</h3>
+  </div>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-4 col-md-3 order-last order-sm-first " id="info">
+
+        <h4>Om</h4>
+        <p>Erik Turøy Midtun</p>
+        <p class="ph">16.05.97</p>
+        <h4>Kontakt</h4>
+        <p><a href="mailto: etm.midtun@gmail.com">etm.midtun@gmail.com</a></p>
+        <p class="ph"><a href="mailto: eriktm@stud.ntnu.no">eriktm@stud.ntnu.no</a></p>
+
+        <p class="ph"><a href="https://github.com/eriktmidtun" class="ph">Github</a></p>
+
+
+        <h4>Språk</h4>
+        <p>Norsk</p>
+        <p class="ph">Engelsk</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-8 col-md-9 order-first order-sm-last " id="content">
+        <div class="container segment">
+
+
+        {% for section in Sections.all %}
+          <h2>{{section.section_title}}</h2>
+            
+            {% for entry in section.entry_set.all %}
+                <div class="row ph">
+                    <div class="col-sm-12 col-md-2 ">
+                        <p>
+                            {{entry.time}}
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-5 ">
+                        <p><b>
+                            {{entry.title}}
+                        </b></p>
+                        <p>{{entry.description}} </p>
+                    </div>
+                    <div class="col-sm-12 col-md-5 ">
+                        <p class="place"> {{entry.place}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
