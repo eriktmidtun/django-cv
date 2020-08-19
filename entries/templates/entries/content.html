@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block sidebar %}
+
+  {% for ssection in Sidebars.all %}
+    <h4>{{ssection.title}}</h4>
+      {% for Sentry in ssection.sentry_set.all %}
+        {% if Sentry.visible %}
+          {% if Sentry.link %} 
+             <p class="ph"><a href="{{Sentry.link}}">{{Sentry.title}}</a></p>
+          {% else %} 
+            <p class="ph">{{ Sentry.title }}</p>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+  {% endfor %}
+
+{% endblock sidebar %}
+
+
+{% block content %}
+
+        {% for section in Sections.all %}
+
+
+            <h2>{{section.title}}</h2>
+              
+              {% for entry in section.entry_set.all %}
+                {% if entry.visible %}
+                  <div class="row ph">
+                      <div class="col-sm-12 col-md-2 ">
+                          <p>
+                              {{entry.time}}
+                          </p>
+                      </div>
+                      <div class="col-sm-12 col-md-5 ">
+                          <p><b>
+                              {{entry.title}}
+                          </b></p>
+                          <p>{{entry.description}} </p>
+                      </div>
+                      <div class="col-sm-12 col-md-5 ">
+                          <p class="place"> {{entry.place}}</p>
+                      </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+        {% endfor %}
+{% endblock content %}
