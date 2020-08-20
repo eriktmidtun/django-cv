@@ -1,0 +1,269 @@
+[
+    {
+        "model": "entries.section",
+        "pk": 1,
+        "fields": {
+            "title": "Utdanning",
+            "visible": true,
+            "order_priority": 7
+        }
+    },
+    {
+        "model": "entries.section",
+        "pk": 2,
+        "fields": {
+            "title": "Arbeidserfaring",
+            "visible": true,
+            "order_priority": 1
+        }
+    },
+    {
+        "model": "entries.section",
+        "pk": 3,
+        "fields": {
+            "title": "Personlige Prosjekter",
+            "visible": false,
+            "order_priority": 1
+        }
+    },
+    {
+        "model": "entries.section",
+        "pk": 4,
+        "fields": {
+            "title": "Kurs og serfikater",
+            "visible": true,
+            "order_priority": -2
+        }
+    },
+    {
+        "model": "entries.entry",
+        "pk": 1,
+        "fields": {
+            "title": "Kommunikasjonsteknologi og Digital sikkerhet",
+            "visible": true,
+            "order_priority": 4,
+            "time": "2018 - Nå",
+            "place": "Norges teknisk-naturvitenskaplige universitet",
+            "description": "Integrert master i utvikling, nettverk og sikkerhet",
+            "section": 1
+        }
+    },
+    {
+        "model": "entries.entry",
+        "pk": 2,
+        "fields": {
+            "title": "Informatikk: Datateknologi",
+            "visible": true,
+            "order_priority": 2,
+            "time": "2017 - 2018",
+            "place": "Universitetet i Bergen",
+            "description": "1. året",
+            "section": 1
+        }
+    },
+    {
+        "model": "entries.entry",
+        "pk": 3,
+        "fields": {
+            "title": "IT-leder og utvikler",
+            "visible": true,
+            "order_priority": 4,
+            "time": "2019 - Nå",
+            "place": "Studentmediene i Trondheim",
+            "description": "Studentverv. Utvikling av interne og eksterne systemer for studentmediene",
+            "section": 2
+        }
+    },
+    {
+        "model": "entries.entry",
+        "pk": 4,
+        "fields": {
+            "title": "Vognfører og sambandsoldat",
+            "visible": true,
+            "order_priority": 2,
+            "time": "2016 - 2017",
+            "place": "Sambandsbataljonen, Forsvaret",
+            "description": "Opprykk til Ledende Menig",
+            "section": 2
+        }
+    },
+    {
+        "model": "entries.entry",
+        "pk": 5,
+        "fields": {
+            "title": "Kasserer matbutikk",
+            "visible": true,
+            "order_priority": 1,
+            "time": "2015 - 2019",
+            "place": "Meny Voss",
+            "description": "Deltidsjobb/sommerjobb ved siden av studier",
+            "section": 2
+        }
+    },
+    {
+        "model": "entries.entry",
+        "pk": 6,
+        "fields": {
+            "title": "Førerkortet Klasse B",
+            "visible": true,
+            "order_priority": 1,
+            "time": "2015",
+            "place": "Voss trafikkstasjon",
+            "description": null,
+            "section": 4
+        }
+    },
+    {
+        "model": "entries.sidebar",
+        "pk": 1,
+        "fields": {
+            "title": "Kontakt",
+            "visible": true,
+            "order_priority": 5
+        }
+    },
+    {
+        "model": "entries.sidebar",
+        "pk": 2,
+        "fields": {
+            "title": "Github",
+            "visible": true,
+            "order_priority": 2
+        }
+    },
+    {
+        "model": "entries.sidebar",
+        "pk": 3,
+        "fields": {
+            "title": "Programmering",
+            "visible": true,
+            "order_priority": -1
+        }
+    },
+    {
+        "model": "entries.sidebar",
+        "pk": 4,
+        "fields": {
+            "title": "LinkedIn",
+            "visible": true,
+            "order_priority": 1
+        }
+    },
+    {
+        "model": "entries.sentry",
+        "pk": 1,
+        "fields": {
+            "title": "Erik Turøy Midtun",
+            "visible": true,
+            "order_priority": 5,
+            "link": null,
+            "sidebar_section": 1,
+            "space_bottom": true
+        }
+    },
+    {
+        "model": "entries.sentry",
+        "pk": 2,
+        "fields": {
+            "title": "47908654",
+            "visible": true,
+            "order_priority": 1,
+            "link": null,
+            "sidebar_section": 1,
+            "space_bottom": false
+        }
+    },
+    {
+        "model": "entries.sentry",
+        "pk": 3,
+        "fields": {
+            "title": "etm.midtun@gmail.com",
+            "visible": true,
+            "order_priority": 0,
+            "link": "mailto: etm.midtun@gmail.com",
+            "sidebar_section": 1,
+            "space_bottom": true
+        }
+    },
+    {
+        "model": "entries.sentry",
+        "pk": 4,
+        "fields": {
+            "title": "eriktmidtun",
+            "visible": true,
+            "order_priority": 1,
+            "link": "https://github.com/eriktmidtun",
+            "sidebar_section": 2,
+            "space_bottom": true
+        }
+    },
+    {
+        "model": "entries.sentry",
+        "pk": 5,
+        "fields": {
+            "title": "Javascript",
+            "visible": true,
+            "order_priority": 5,
+            "link": null,
+            "sidebar_section": 3,
+            "space_bottom": false
+        }
+    },
+    {
+        "model": "entries.sentry",
+        "pk": 7,
+        "fields": {
+            "title": "React & Node",
+            "visible": true,
+            "order_priority": 2,
+            "link": null,
+            "sidebar_section": 3,
+            "space_bottom": false
+        }
+    },
+    {
+        "model": "entries.sentry",
+        "pk": 8,
+        "fields": {
+            "title": "Python & Django",
+            "visible": true,
+            "order_priority": 1,
+            "link": null,
+            "sidebar_section": 3,
+            "space_bottom": false
+        }
+    },
+    {
+        "model": "entries.sentry",
+        "pk": 9,
+        "fields": {
+            "title": "Java",
+            "visible": true,
+            "order_priority": 0,
+            "link": null,
+            "sidebar_section": 3,
+            "space_bottom": false
+        }
+    },
+    {
+        "model": "entries.sentry",
+        "pk": 10,
+        "fields": {
+            "title": "erikturøymidtun",
+            "visible": true,
+            "order_priority": 0,
+            "link": "https://www.linkedin.com/in/eriktur%C3%B8ymidtun/",
+            "sidebar_section": 4,
+            "space_bottom": true
+        }
+    },
+    {
+        "model": "entries.siteconfig",
+        "pk": 1,
+        "fields": {
+            "title": "ErikTMidtun",
+            "sub_title": "Curriculum Vitae",
+            "introtext": null
+        }
+    }
+]

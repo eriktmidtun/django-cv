@@ -66,6 +66,19 @@ setup static files
 python manage.py collectstatic
 ```
 
+#### load data
+Initial data from the site can be loaded into the database from the fixtures json files.
+example:
+```bash
+python manage.py loaddata fixtures/data_20_08_2020.json
+```
+
+Database data can be exported as a fixture json file:
+```bash
+python manage.py dumpdata > fixtures/data.json
+```
+Only the parts of the database like the sections and entries should be kept. The rest should be manually deleted.
+
 ### in development
 
 Make .env file with following:
