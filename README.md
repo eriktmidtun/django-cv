@@ -66,3 +66,11 @@ setup static files
 python manage.py collectstatic
 ```
 
+### in development
+
+Make .env file with following:
+```Python
+DATABASE_URL=sqlite:///db.sqlite3
+SECRET_KEY = 'RANDOM STRING HERE'
+DEBUG = True
+```
