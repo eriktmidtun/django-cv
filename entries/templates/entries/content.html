@@ -21,6 +21,7 @@
   {% endif %}
 {% endblock introtext%}
 
+
 {% block sidebar %}
 
   {% for ssection in Sidebars.all %}
@@ -58,10 +59,10 @@
                           <p><b>
                               {{entry.title}}
                           </b></p>
-                          <p>{{entry.description}} </p>
+                          <p>{{entry.description|default_if_none:"" }} </p>
                       </div>
                       <div class="col-sm-12 col-md-5 ">
-                          <p class="place"> {{entry.place}}</p>
+                          <p class="place"> {{entry.place|default_if_none:"" }}</p>
                       </div>
                   </div>
                 {% endif %}
