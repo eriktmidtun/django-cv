@@ -5,10 +5,13 @@
     <h4>{{ssection.title}}</h4>
       {% for Sentry in ssection.sentry_set.all %}
         {% if Sentry.visible %}
+
+        
+
           {% if Sentry.link %} 
-             <p class="ph"><a href="{{Sentry.link}}">{{Sentry.title}}</a></p>
+             <p class="{% if Sentry.space_bottom %} ph {% endif %}"><a href="{{Sentry.link}}">{{Sentry.title}}</a></p>
           {% else %} 
-            <p class="ph">{{ Sentry.title }}</p>
+            <p class="{% if Sentry.space_bottom %} ph {% endif %}">{{ Sentry.title }}</p>
           {% endif %}
         {% endif %}
       {% endfor %}
