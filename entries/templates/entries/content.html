@@ -1,4 +1,26 @@
 {% extends "base.html" %}
+
+{% load solo_tags %}
+
+{% block sitename%}
+  {% get_solo 'entries.SiteConfig' as site_config %}
+  {{site_config.title}}
+{% endblock sitename%}
+  
+
+{% block header %}
+  {% get_solo 'entries.SiteConfig' as site_config %}
+  <h1><b>{{site_config.title}}</b></h1>
+  <h3>{{site_config.sub_title}}</h3>
+{% endblock header %}
+
+{% block introtext %}
+  {% get_solo 'entries.SiteConfig' as site_config %}
+  {% if site_config.introtext %}
+  <p>{{site_config.introtext}}</p>
+  {% endif %}
+{% endblock introtext%}
+
 {% block sidebar %}
 
   {% for ssection in Sidebars.all %}

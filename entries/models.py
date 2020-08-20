@@ -1,4 +1,5 @@
 from django.db import models
+from solo.models import SingletonModel
 
 class CommonModel(models.Model):
     title = models.CharField(max_length=200, null=True)
@@ -39,3 +40,15 @@ class Sentry(CommonModel):
     class Meta:
         verbose_name = 'Sidebar entrie'
         ordering = ['-order_priority']
+
+class SiteConfig(SingletonModel):
+    title = models.CharField(max_length=15, null=False, default="SiteName")
+    sub_title = models.CharField(max_length=30, null=False, default='Curriculum Vitae')
+    introtext = models.CharField(max_length=200, null=True, blank=True)
+
+    def __str__(self):
+        return "Site Configuration"
+
+    class Meta:
+        verbose_name = "Site Configuration"
+

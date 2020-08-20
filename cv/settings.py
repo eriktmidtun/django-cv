@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'solo.apps.SoloAppConfig',
     'entries.apps.EntriesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
