@@ -18,7 +18,10 @@ import dotenv
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+# load environment variables from .env
+dotenv_file= os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -124,7 +127,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-print('BASE_DIR', BASE_DIR)
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'entries/static'),
@@ -134,8 +136,3 @@ STATICFILES_DIRS = [
 django_heroku.settings(locals())# This is new
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
-
-# load environment variables from .env
-dotenv_file= os.path.join(BASE_DIR, ".env")
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
